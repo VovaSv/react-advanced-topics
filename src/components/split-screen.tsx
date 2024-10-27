@@ -14,15 +14,10 @@ const Panel = styled.div<PanelProps>`
 `;
 
 export const SplitScreen = ({
-	Left,
-	Right,
 	leftWidth = 1,
 	rightWidth = 1,
 	children,
-}: //children,
-{
-	Left: any;
-	Right: any;
+}: {
 	leftWidth: number;
 	rightWidth: number;
 	children: React.ReactNode[];

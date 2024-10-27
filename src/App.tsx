@@ -18,7 +18,7 @@ function App() {
 		// />
 
 		<SplitScreen leftWidth={1} rightWidth={3}>
-			<LeftSideComp />
+			<LeftSideComp title='helloe' />
 			<RightSideComp />
 		</SplitScreen>
 	);
