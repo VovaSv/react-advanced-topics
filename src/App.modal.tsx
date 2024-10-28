@@ -1,21 +1,20 @@
-import { Modal } from './components/Modal';
-import { ListRenderer } from './components/lists/List';
-import { books } from './data/books';
+import { Modal } from "./components/Modal";
+import { SmallBookListItem } from "./components/books/SmallBookListItem";
+import { RegularList } from "./components/lists/Regular";
+import { books } from "./data/books";
 
 function App() {
-	return (
-		<>
-			Some data
-			<Modal>
-				<ListRenderer
-					items={books}
-					sourceName={'book'}
-					size={'large'}
-					isNumbered={true}
-				/>
-			</Modal>
-		</>
-	);
+  return (
+    <>
+      <Modal>
+        <RegularList
+          items={books}
+          sourceName={"book"}
+          ItemComponent={SmallBookListItem}
+        />
+      </Modal>
+    </>
+  );
 }
 
 export default App;
