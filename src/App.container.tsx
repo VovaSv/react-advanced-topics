@@ -1,17 +1,23 @@
 
-import { CurrentUserLoader } from "./components/current-user-loader";
+import { UserLoaderChildrenMap } from "./components/user-loader-container-children-map";
 import { UserInfo } from "./components/user-info";
+import { UserLoaderRenderProps } from "./components/user-loader-container-render-props";
 
 
 function App() {
   return (
     <>
-    {'Container'}
-        <CurrentUserLoader>
+    <h1>Container Children Map</h1>
+    <hr />
+        <UserLoaderChildrenMap>
             <UserInfo />
-        </CurrentUserLoader>
+        </UserLoaderChildrenMap>
+       <h1>Render Props</h1>
+       <hr />
+        <UserLoaderRenderProps render={(extraProps: any) => <UserInfo {...extraProps} />} />
     </>
   );
 }
+
 
 export default App;
