@@ -1,9 +1,9 @@
-import { UserLoaderChildrenMap } from "./components/user-loader-container-children-map";
+import { UserLoaderChildrenMap } from "./components/data-loaders/user-loader-container-children-map";
 import { UserInfo } from "./components/user-info";
-import { UserLoaderRenderProps } from "./components/user-loader-container-render-props";
-import { UserLoaderByIdChildrenMap } from "./components/user-loader-by-idcontainer-children-map";
-import { GenericLoaderContainerChildrenMap } from "./components/generic-loader-container-children-map";
-import { DataSourceContainer } from "./components/data-source-container";
+import { UserLoaderRenderProps } from "./components/data-loaders/user-loader-container-render-props";
+import { UserLoaderByIdChildrenMap } from "./components/data-loaders/user-loader-by-idcontainer-children-map";
+import { GenericLoaderContainerChildrenMap } from "./components/data-loaders/generic-loader-container-children-map";
+import { DataSourceContainer } from "./components/data-loaders/data-source-container";
 import axios from "axios";
 
 const getDataFromServer = async (url: string) => {
