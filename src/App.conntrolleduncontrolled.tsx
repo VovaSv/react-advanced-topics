@@ -5,18 +5,18 @@ import { UncontrolledModal } from "./components/controlled-uncontrolled/uncontro
 import { ControlledModal } from "./components/controlled-uncontrolled/controlled-modal";
 
 function App() {
-  const [show, setShow] = useState(false);
+  const [modalState, setModalState] = useState(false);
 
   return (
     <>
       <UncontrolledForm />
       <ControlledForm />
       <UncontrolledModal />
-      <ControlledModal show={show} setShow={setShow} />
+      <ControlledModal show={modalState} setShow={setModalState} />
       <br />
-      <button onClick={() => setShow(!show)}>
+      <button onClick={() => setModalState((prevState) => !prevState)}>
         {" "}
-        Controll Modal From Outside
+        {modalState ? "Hide" : "Show"} {" Controlled Modal"}
       </button>
     </>
   );
